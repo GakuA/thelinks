@@ -1,17 +1,17 @@
 {
-    "scripts": {
-        "post-install-cmd": [
-            "PhantomInstaller\\Installer::installPhantomJS"
-        ],
-        "post-update-cmd":[
-            "PhantomInstaller\\Installer::installPhantomJS"
-        ]
-    },
+"scripts": {
+		"post-install-cmd": [
+			"PhantomInstaller\\Installer::installPhantomJS"
+		],
+		"post-update-cmd":[
+			"PhantomInstaller\\Installer::installPhantomJS"
+		]
+	},
 
-    "config": {
-        "bin-dir": "bin"
-    },
-    "require": {
-        "jonnyw/php-phantomjs": "4.*"
-    }
+	"config": {
+		"bin-dir": "bin"
+	},
+	"require": {
+		"jonnyw/php-phantomjs": "4.*"
+	}
 }
