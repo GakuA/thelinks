@@ -8,7 +8,8 @@
 		hello
 		<?php
 			//画像のパス
-			$image_path = "https://s.wordpress.com/mshots/v1/https://www.youtube.com?w=300&h=200";
+			//$image_path = "https://s.wordpress.com/mshots/v1/https://www.youtube.com?w=300&h=200";
+			$image_path = "https://image.itmedia.co.jp/images/logo/pcvheader_news.png";
 			//保存するファイル名
 			$file_name = 'test.jpg';
 			$image = file_get_contents($image_path);
