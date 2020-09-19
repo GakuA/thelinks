@@ -35,7 +35,7 @@
 
 		$request = $client->getMessageFactory()->createCaptureRequest();
 		$request->setTimeout(5000);
-		$request->setUrl('https://m.youtube.com/watch?v=mxLB2Q8U7dA');
+		$request->setUrl('https://headlines.yahoo.co.jp/hl?a=20200919-00000169-dal-ent');
 		var_dump($request);
 		// サイズ指定
 		$width = 800;
