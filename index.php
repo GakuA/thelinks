@@ -13,6 +13,8 @@
 		$client = Client::getInstance();
 
 		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4')) {}
+			while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4')) {}
+				while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4')) {}
 		while (!$response = $client->getMessageFactory()->createResponse()) {}
 
 		// サイズ指定
