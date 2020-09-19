@@ -12,7 +12,7 @@
 
 		$client = Client::getInstance();
 
-		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://www.tokyo-felicia.com/')) {};
+		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://docodoor.co.jp/web/')) {};
 		$response = $client->getMessageFactory()->createResponse();
 
 		// サイズ指定
