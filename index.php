@@ -8,7 +8,7 @@
 		hello
 		<?php
 		require_once( 'vendor/autoload.php' );
-
+echo("world");
 		use JonnyW\PhantomJs\Client;
 
 		$client = Client::getInstance();
