@@ -54,9 +54,9 @@
 
 		$request->setOutputFile($file);
 		$response = $client->getMessageFactory()->createResponse();
-		while ($response->getStatus() !== 200) {
+		//while ($response->getStatus() !== 200) {
 			$client->send($request, $response);
-		}
+		//}
 
 		?>
 	</body>
