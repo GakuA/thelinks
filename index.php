@@ -8,11 +8,11 @@
 		hello
 		<?php
 			//画像のパス
-			//$image_path = "https://s.wordpress.com/mshots/v1/https://www.youtube.com?w=300&h=200";
-			$image_path = "https://image.itmedia.co.jp/images/logo/pcvheader_news.png";
+			$image_path = "https://s.wordpress.com/mshots/v1/https://www.youtube.com?w=300&h=200";
+			//$image_path = "https://image.itmedia.co.jp/images/logo/pcvheader_news.png";
 			//保存するファイル名
 			$file_name = 'test.jpg';
-			while (!$image = file_get_contents($image_path)) {
+			while (!$image = file_get_contents($image_path.".jpg")) {
 				echo "tryDL";
 			}
 
