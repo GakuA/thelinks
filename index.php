@@ -6,42 +6,35 @@
 	</head>
 	<body>
 		hello
+		<img src="https://s.wordpress.com/mshots/v1/https://m.youtube.com/watch?v=0FTTildpyt4?w=400&h=300">
 		<?php
-		require_once './vendor/autoload.php';
+		/*
+		require_once( 'vendor/autoload.php' );
+		use JonnyW\PhantomJs\Client;
 
-use Facebook\WebDriver\Chrome\ChromeOptions;
-use Facebook\WebDriver\Remote\RemoteWebDriver;
-use Facebook\WebDriver\Remote\DesiredCapabilities;
-use Facebook\WebDriver\WebDriverDimension;
+		$client = Client::getInstance();
 
-//ヘッドレスモードで起動
-$options = new ChromeOptions();
-$options->addArguments(['--headless']);
-$capabilities = DesiredCapabilities::chrome();
-$capabilities->setCapability(ChromeOptions::CAPABILITY, $options);
-$driver = RemoteWebDriver::create('http://localhost:4444/wd/hub', $capabilities);
+		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4')) {}
+		set_time_limit(2);
+		while (!$response = $client->getMessageFactory()->createResponse()) {}
 
-//繰り返しの処理を入れたければここから
-$url = "https://www.yahoo.co.jp/";
-$imageName = "capture.file";
-$driver->get($url);
+		// サイズ指定
+		$width = 800;
+		$height = 600;
+		$request->setViewportSize($width, $height);
 
-// 一旦 ウィンドウサイズを任意に指定
-// 縦幅は調整してくれるが、
-// 横幅はここの値が引き継がれてるみたい？
-$dimension = new WebDriverDimension(1920, 1080); // width, height
-$driver->manage()->window()->setSize($dimension);
+		$dim_width = 800;
+		$dim_height = 600;
+		$top = 0;
+		$left = 0;
 
-// 実際のコンテンツサイズを取得して調整
-$contentWidth = $driver->executeScript("return Math.max(document.body.scrollWidth, document.body.offsetWidth, document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.offsetWidth);");
-$contentHeight = $driver->executeScript("return Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);");
-$dimension_content = new WebDriverDimension($contentWidth, $contentHeight);
-$driver->manage()->window()->setSize($dimension_content);
+		$request->setCaptureDimensions($dim_width, $dim_height, $top, $left);
 
-$file = __DIR__ . $imageName . ".jpg";
-$driver->takeScreenshot($file);
-
-$driver->close();
+		// ファイルの保存先を指定する
+		$file = 'capture/file.jpg';
+		$request->setOutputFile($file);
+		$client->send($request, $response);
+		*/
 		?>
 	</body>
 </html>
