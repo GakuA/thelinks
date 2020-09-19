@@ -22,7 +22,7 @@
 
 		// ファイルの保存先を指定する
 		$file = 'cupture/file.jpg';
-
+var_dump($request);
 		$request->setOutputFile($file);
 		echo("world6");
 		$client->send($request, $response);
