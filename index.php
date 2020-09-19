@@ -21,7 +21,7 @@
 		echo("world5");
 
 		// ファイルの保存先を指定する
-		$file = 'screenshots/file.jpg';
+		$file = 'cupture/file.jpg';
 
 		$request->setOutputFile($file);
 		echo("world6");
