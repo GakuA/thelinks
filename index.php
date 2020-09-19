@@ -18,7 +18,6 @@
 		    private $left;
 		    private $URL;
 		    private $timeOut = 30000;
-			echo("tyr1");
 		    //画面サイズなどを決定する
 		    function __construct($width, $height, $URL){
 		        $this->width = $width;
@@ -26,6 +25,7 @@
 		        $this->top = 0;
 		        $this->left = 0;
 		        $this->URL = $URL;
+				echo("tyr1");
 		    }
 
 		    //phantomjs実行クライアントを作成する
