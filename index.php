@@ -21,12 +21,11 @@
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_TIMEOUT, 60);
 		//var_dump($img);
-		$img = curl_exec($ch);
+		while (!$img = curl_exec($ch)) {}
 		$img_name = "capture/file.jpg";
 
 		//画像を保存
 		file_put_contents($img_name, $img);
-
 
 		/*
 		require_once( 'vendor/autoload.php' );
