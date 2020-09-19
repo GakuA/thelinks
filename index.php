@@ -18,7 +18,7 @@
 		    private $left;
 		    private $URL;
 		    private $timeOut = 30000;
-//echo("tyr1");
+			echo("tyr1");
 		    //画面サイズなどを決定する
 		    function __construct($width, $height, $URL){
 		        $this->width = $width;
@@ -77,7 +77,7 @@
 		while (!$screenshot = new ScreenShot(1000, 750, 'https://www.youtube.com/watch?v=0FTTildpyt4')){
 			echo("try");
 		};
-		$screenshot->MakeImg('capture/test.jpg');
+		$screenshot->MakeImg('test.jpg');
 		?>
 	</body>
 </html>
