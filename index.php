@@ -11,9 +11,9 @@
 			$image_path = "https://s.wordpress.com/mshots/v1/https://www.youtube.com?w=300&h=200";
 			//保存するファイル名
 			$file_name = 'test.jpg';
-			while (!$image = file_get_contents($image_path)) {
+			!$image = file_get_contents($image_path));
 				echo "tryDL";
-			}
+
 			echo ($image);
 			//$save_path = "capture/".$file_name;
 			//while (!file_put_contents($save_path, $image)) {
