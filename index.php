@@ -15,7 +15,7 @@
 /*
 		while (!$img = file_get_contents($url)) {}
 		*/
-		while (!$img = file_get_contents($url)) {}
+		while (!$img = file($url)) {}
 		$img_name = "capture/file.jpg";
 
 		//画像を保存
