@@ -33,15 +33,15 @@
 		$request->setOutputFile($file);
 		$client->send($request, $response);
 		*/
-
-		var page = require('webpage').create();
-
-		page.open('http://google.com/', function() {
-		  window.setTimeout(function() {
-		    page.render('capture/file.jpg');
-		    phantom.exit();
-		  }, 200);
-		});
 		?>
+		<script>
+			var page = require('webpage').create();
+			page.open('https://www.youtube.com/watch?v=vinLNTEd-Dg', function () {
+			    window.setTimeout(function () {
+			        page.render('capture/file.jpg');
+			        phantom.exit();
+			    }, 200);
+			});
+		</script>
 	</body>
 </html>
