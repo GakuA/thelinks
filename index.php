@@ -33,7 +33,7 @@
 
 		$client = Client::getInstance();
 		$client->isLazy();
-		$location = 'partials/';
+		$location = 'partials';
 
 		$serviceContainer = ServiceContainer::getInstance();
 		$procedureLoader = $serviceContainer->get('procedure_loader_factory')->createProcedureLoader($location);
