@@ -33,8 +33,9 @@
 
 		$client = Client::getInstance();
 		$client->isLazy();
-		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://www.tokyo-felicia.com/')) {}
+		$request = $client->getMessageFactory()->createCaptureRequest();
 		$request->setTimeout(10000);
+		$request->setUrl('https://www.google.co.in');
 		// サイズ指定
 		$width = 800;
 		$height = 600;
