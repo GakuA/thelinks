@@ -57,6 +57,7 @@
 		//while ($response->getStatus() !== 200) {
 			$client->send($request, $response);
 		//}
+		var_dump($client);
 
 		?>
 	</body>
