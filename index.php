@@ -7,6 +7,7 @@
 	<body>
 		hello
 		<?php
+		/*
 		require_once( 'vendor/autoload.php' );
 		use JonnyW\PhantomJs\Client;
 
@@ -31,6 +32,16 @@
 		$file = 'capture/file.jpg';
 		$request->setOutputFile($file);
 		$client->send($request, $response);
+		*/
+
+		var page = require('webpage').create();
+
+		page.open('http://google.com/', function() {
+		  window.setTimeout(function() {
+		    page.render('capture/file.jpg');
+		    phantom.exit();
+		  }, 200);
+		});
 		?>
 	</body>
 </html>
