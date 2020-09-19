@@ -8,7 +8,7 @@
 		hello
 		<?php
 			//画像のパス
-			$image_path = "https://s.wordpress.com/mshots/v1/https://www.youtube.com/watch?v=YLBM-H2r6-c?w=300&h=200";
+			$image_path = "https://s.wordpress.com/mshots/v1/https://www.youtube.com?w=300&h=200";
 			//保存するファイル名
 			$file_name = 'test.jpg';
 
