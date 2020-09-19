@@ -35,14 +35,14 @@
 
 		$request = $client->getMessageFactory()->createCaptureRequest();
 
-		$request->setUrl('https://m.youtube.com/watch?v=0FTTildpyt4');
+		$request->setUrl('https://news.yahoo.co.jp/articles/a2de6eda5d92f1529e8e0ff5c9dcb8ddc4d4e0fe');
 		// サイズ指定
-		$width = 800;
-		$height = 600;
+		$width = 400;
+		$height = 300;
 		$request->setViewportSize($width, $height);
 
-		$dim_width = 800;
-		$dim_height = 600;
+		$dim_width = 400;
+		$dim_height = 300;
 		$top = 0;
 		$left = 0;
 
