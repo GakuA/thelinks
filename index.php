@@ -13,6 +13,7 @@
 		$client = Client::getInstance();
 
 		$request  = $client->getMessageFactory()->createCaptureRequest('https://www.tokyo-felicia.com/');
+var_dump($request);
 		$response = $client->getMessageFactory()->createResponse();
 
 		// ファイルの保存先を指定する
