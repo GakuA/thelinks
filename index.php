@@ -12,18 +12,19 @@
 			$image_path = "https://image.itmedia.co.jp/images/logo/pcvheader_news.png";
 			//保存するファイル名
 			$file_name = 'test.jpg';
-			$image = file_get_contents($image_path);
-			echo "tryDL";
+			while (!$image = file_get_contents($image_path)) {
+				echo "tryDL";
+			}
 
 			if ($image) {
 				echo ($image);
 			} else {
 				echo ("false");
 			}
-			//$save_path = "capture/".$file_name;
-			//while (!file_put_contents($save_path, $image)) {
-			//	echo "tryUL";
-			//}
+			$save_path = "capture/".$file_name;
+			while (!file_put_contents($save_path, $image)) {
+				echo "tryUL";
+			}
 		?>
 	</body>
 </html>
