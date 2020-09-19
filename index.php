@@ -11,10 +11,11 @@
 		-->
 		<?php
 		$url = "https://s.wordpress.com/mshots/v1/https://m.youtube.com/watch?v=0FTTildpyt4?w=400&h=300.jpg";
-
+/*
 		while (!$img = file_get_contents($url)) {}
-			while (!$img = file_get_contents($url)) {}
-
+		while (!$img = file_get_contents($url)) {}
+*/
+		$img = file_get_contents($url);
 		$img_name = "capture/file.jpg";
 
 		//画像を保存
