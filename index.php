@@ -15,7 +15,7 @@
 		//$url = "https://pbs.twimg.com/profile_banners/42566884/1526165516/1500x500";
 		while (!$img = wp_remote_get($url)) {}
 		//$img = file($url);
-		//var_dump($img);
+		var_dump($img);
 		$img_name = "capture/file.jpg";
 
 		//画像を保存
