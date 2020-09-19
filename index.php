@@ -35,7 +35,7 @@
 		$client->isLazy();
 		$request = $client->getMessageFactory()->createCaptureRequest();
 		$request->setTimeout(10000);
-		$request->setUrl('https://www.google.co.in');
+		$request->setUrl('https://m.youtube.com/watch?v=0FTTildpyt4');
 		// サイズ指定
 		$width = 800;
 		$height = 600;
