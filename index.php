@@ -28,14 +28,14 @@
 		file_put_contents($img_name, $img);
 		*/
 
-		require_once( 'vendor/autoload.php' );
+		require_once('vendor/autoload.php');
 		use JonnyW\PhantomJs\Client;
 
 		$client = Client::getInstance();
 
-		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4')) {}
+		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4', 'GET', 3000)) {}
 		//set_time_limit(2);
-		while (!$response = $client->getMessageFactory()->createResponse()) {}
+		$response = $client->getMessageFactory()->createResponse();
 
 		// サイズ指定
 		$width = 800;
