@@ -35,7 +35,7 @@
 
 		$request = $client->getMessageFactory()->createCaptureRequest();
 		$request->setTimeout(5000);
-		$request->setUrl('https://news.yahoo.co.jp/articles/a2de6eda5d92f1529e8e0ff5c9dcb8ddc4d4e0fe');
+		$request->setUrl('https://news.yahoo.co.jp/pickup/6371548');
 		var_dump($request);
 		// サイズ指定
 		$width = 400;
@@ -54,7 +54,9 @@
 
 		$request->setOutputFile($file);
 		$response = $client->getMessageFactory()->createResponse();
-		$client->send($request, $response);
+		while ($response->getStatus() !== 200) {
+			$client->send($request, $response);
+		}
 
 		?>
 	</body>
