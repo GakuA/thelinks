@@ -31,6 +31,10 @@
 		$file = 'capture/file.jpg';
 		$request->setOutputFile($file);
 		$client->send($request, $response);
+
+		if ($response->getStatus() === 200) {
+			echo $response->getContent();
+		}
 		?>
 	</body>
 </html>
