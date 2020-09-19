@@ -28,6 +28,7 @@
 		file_put_contents($img_name, $img);
 		*/
 
+		/*
 		require_once('vendor/autoload.php');
 		use JonnyW\PhantomJs\Client;
 
@@ -58,7 +59,20 @@
 			$client->send($request, $response);
 		}
 		var_dump($client);
-
+		*/
 		?>
+		<script>
+			//casperオブジェクトを生成
+			var casper = require('casper').create();
+
+			//指定のURLへ遷移する
+			casper.start('http://www.yahoo.co.jp', function() {
+			    //画面のキャプチャを取得
+			    this.capture('yahoo.png');
+			});
+
+			//処理の実行
+			casper.run();
+		</script>
 	</body>
 </html>
