@@ -32,10 +32,7 @@
 		use JonnyW\PhantomJs\Client;
 
 		$client = Client::getInstance();
-		$client->getEngine()->setPath('bin/phantomjs'); // phantomjs path
 		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4')) {}
-		//set_time_limit(2);
-		$response = $client->getMessageFactory()->createResponse();
 
 		// サイズ指定
 		$width = 800;
@@ -52,6 +49,7 @@
 		// ファイルの保存先を指定する
 		$file = 'capture/file.jpg';
 		$request->setOutputFile($file);
+		$response = $client->getMessageFactory()->createResponse();
 		$client->send($request, $response);
 
 		?>
