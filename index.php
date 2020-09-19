@@ -67,8 +67,8 @@
 
 			//指定のURLへ遷移する
 			casper.start('http://www.yahoo.co.jp', function() {
-			    //画面のキャプチャを取得
-			    this.capture('yahoo.png');
+				//画面のキャプチャを取得
+				this.capture('capture/file.jpg');
 			});
 
 			//処理の実行
