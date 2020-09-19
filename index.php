@@ -33,7 +33,7 @@
 
 		$client = Client::getInstance();
 
-		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4', 'GET', 3000)) {}
+		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4', 'GET', 10000)) {}
 		//set_time_limit(2);
 		$response = $client->getMessageFactory()->createResponse();
 
