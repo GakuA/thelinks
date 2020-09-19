@@ -33,7 +33,7 @@
 
 		$client = Client::getInstance();
 		$client->getEngine()->setPath('bin/phantomjs'); // phantomjs path
-		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4', 'GET', 100000)) {}
+		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4', 'GET', 300000)) {}
 		//set_time_limit(2);
 		$response = $client->getMessageFactory()->createResponse();
 
