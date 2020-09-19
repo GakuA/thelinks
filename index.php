@@ -12,9 +12,10 @@
 
 		$client = Client::getInstance();
 
-		$request  = $client->getMessageFactory()->createCaptureRequest('https://www.tokyo-felicia.com/');
+		$request  = $client->getMessageFactory()->createCaptureRequest('https://www.tokyo-felicia.com');
 var_dump($request);
 		$response = $client->getMessageFactory()->createResponse();
+		var_dump($response);
 
 		// ファイルの保存先を指定する
 		$file = 'capture/file.jpg';
