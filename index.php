@@ -12,7 +12,7 @@
 
 		$client = Client::getInstance();
 
-		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://minory.org/url-screenshot-api.html')) {}
+		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://www.youtube.com/watch?v=vinLNTEd-Dg')) {}
 		while (!$response = $client->getMessageFactory()->createResponse()) {}
 
 		// サイズ指定
