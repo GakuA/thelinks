@@ -20,8 +20,8 @@
 		curl_setopt($ch, CURLOPT_HEADER, false);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_TIMEOUT, 60);
-		//var_dump($img);
 		while (!$img = curl_exec($ch)) {}
+		var_dump($img);
 		$img_name = "capture/file.jpg";
 
 		//画像を保存
