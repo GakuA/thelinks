@@ -12,10 +12,8 @@
 
 		$client = Client::getInstance();
 
-		$request  = $client->getMessageFactory()->createCaptureRequest('https://www.tokyo-felicia.com/');
-var_dump($request);
+		$request  = $client->getMessageFactory()->createCaptureRequest('https://caloo.jp/hospitals/detail/2135017890');
 		$response = $client->getMessageFactory()->createResponse();
-		var_dump($response);
 
 		// サイズ指定
 		$width = 400;
