@@ -16,12 +16,12 @@
 		while (!$response = $client->getMessageFactory()->createResponse()) {}
 
 		// サイズ指定
-		$width = 400;
-		$height = 300;
+		$width = 800;
+		$height = 600;
 		$request->setViewportSize($width, $height);
 
-		$dim_width = 400;
-		$dim_height = 300;
+		$dim_width = 800;
+		$dim_height = 600;
 		$top = 0;
 		$left = 0;
 
