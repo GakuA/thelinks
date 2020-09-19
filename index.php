@@ -12,7 +12,7 @@
 
 		$client = Client::getInstance();
 
-		$request  = $client->getMessageFactory()->createCaptureRequest('https://caloo.jp/hospitals/detail/2135017890');
+		$request  = $client->getMessageFactory()->createCaptureRequest('https://www.tokyo-felicia.com/');
 var_dump($request);
 		$response = $client->getMessageFactory()->createResponse();
 		var_dump($response);
