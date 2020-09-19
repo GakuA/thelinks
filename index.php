@@ -18,7 +18,7 @@
 		    private $left;
 		    private $URL;
 		    private $timeOut = 30000;
-echo("tyr1");
+//echo("tyr1");
 		    //画面サイズなどを決定する
 		    function __construct($width, $height, $URL){
 		        $this->width = $width;
@@ -57,7 +57,7 @@ echo("tyr1");
 
 		    //
 		    public function MakeImg($screenshotFileName){
-				echo("try2");
+				//echo("try2");
 		        $this->MakeClient();
 		        $this->MakeRequest($screenshotFileName);
 		        $this->MakeRespose();
