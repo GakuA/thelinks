@@ -24,7 +24,9 @@
 		$file = 'screenshots/file.jpg';
 
 		$request->setOutputFile($file);
+		echo("world6");
 		$client->send($request, $response);
+		echo("world7");
 		?>
 	</body>
 </html>
