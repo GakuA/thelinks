@@ -7,31 +7,41 @@
 	<body>
 		hello
 		<?php
-		require_once( 'vendor/autoload.php' );
-		use JonnyW\PhantomJs\Client;
+		require_once './vendor/autoload.php';
 
-		$client = Client::getInstance();
+use Facebook\WebDriver\Chrome\ChromeOptions;
+use Facebook\WebDriver\Remote\RemoteWebDriver;
+use Facebook\WebDriver\Remote\DesiredCapabilities;
+use Facebook\WebDriver\WebDriverDimension;
 
-		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4')) {}
-		set_time_limit(2);
-		while (!$response = $client->getMessageFactory()->createResponse()) {}
+//ヘッドレスモードで起動
+$options = new ChromeOptions();
+$options->addArguments(['--headless']);
+$capabilities = DesiredCapabilities::chrome();
+$capabilities->setCapability(ChromeOptions::CAPABILITY, $options);
+$driver = RemoteWebDriver::create('http://localhost:4444/wd/hub', $capabilities);
 
-		// サイズ指定
-		$width = 800;
-		$height = 600;
-		$request->setViewportSize($width, $height);
+//繰り返しの処理を入れたければここから
+$url = "https://www.yahoo.co.jp/";
+$imageName = "capture.file";
+$driver->get($url);
 
-		$dim_width = 800;
-		$dim_height = 600;
-		$top = 0;
-		$left = 0;
+// 一旦 ウィンドウサイズを任意に指定
+// 縦幅は調整してくれるが、
+// 横幅はここの値が引き継がれてるみたい？
+$dimension = new WebDriverDimension(1920, 1080); // width, height
+$driver->manage()->window()->setSize($dimension);
 
-		$request->setCaptureDimensions($dim_width, $dim_height, $top, $left);
+// 実際のコンテンツサイズを取得して調整
+$contentWidth = $driver->executeScript("return Math.max(document.body.scrollWidth, document.body.offsetWidth, document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.offsetWidth);");
+$contentHeight = $driver->executeScript("return Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);");
+$dimension_content = new WebDriverDimension($contentWidth, $contentHeight);
+$driver->manage()->window()->setSize($dimension_content);
 
-		// ファイルの保存先を指定する
-		$file = 'capture/file.jpg';
-		$request->setOutputFile($file);
-		$client->send($request, $response);
+$file = __DIR__ . $imageName . ".jpg";
+$driver->takeScreenshot($file);
+
+$driver->close();
 		?>
 	</body>
 </html>
