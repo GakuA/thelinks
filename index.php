@@ -12,13 +12,13 @@
 			//保存するファイル名
 			$file_name = 'test';
 			while (!$image = file_get_contents($image_path)) {
-				echo "tryDL"
+				echo "tryDL";
 			}
 
 			$save_path = "capture/".$file_name;
 			while (!file_put_contents($save_path, $image)) {
 				echo "tryUL";
-			};
+			}
 		?>
 	</body>
 </html>
