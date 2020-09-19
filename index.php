@@ -13,9 +13,15 @@
 
 		$url = "https://s.wordpress.com/mshots/v1/https://m.youtube.com/watch?v=0FTTildpyt4";
 		//$url = "https://pbs.twimg.com/profile_banners/42566884/1526165516/1500x500";
-		while (!$img = file_get_contents($url, true)) {}
+		//while (!$img = file_get_contents($url, true)) {}
 		//$img = file($url);
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_HEADER, false);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 60);
 		//var_dump($img);
+		$img = curl_exec($ch);
 		$img_name = "capture/file.jpg";
 
 		//画像を保存
