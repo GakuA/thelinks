@@ -16,9 +16,16 @@
 		$response = $client->getMessageFactory()->createResponse();
 
 		// サイズ指定
-		$width = 800;
-		$height = 600;
+		$width = 400;
+		$height = 300;
 		$request->setViewportSize($width, $height);
+
+		$dim_width = 400;
+		$dim_height = 300;
+		$top = 0;
+		$left = 0;
+
+		$request->setCaptureDimensions($dim_width, $dim_height, $top, $left);
 
 		// ファイルの保存先を指定する
 		$file = 'capture/file.jpg';
