@@ -12,12 +12,12 @@
 
 		$client = Client::getInstance();
 
-		$request  = $client->getMessageFactory()->createCaptureRequest('https://caloo.jp/hospitals/detail/2135017890');
+		while !($request  = $client->getMessageFactory()->createCaptureRequest('https://caloo.jp/hospitals/detail/2135017890')){};
 		$response = $client->getMessageFactory()->createResponse();
 
 		// サイズ指定
-		$width = 400;
-		$height = 300;
+		$width = 800;
+		$height = 600;
 		$request->setViewportSize($width, $height);
 
 		// ファイルの保存先を指定する
