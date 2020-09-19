@@ -12,9 +12,13 @@
 			//保存するファイル名
 			$file_name = 'test.jpg';
 			$image = file_get_contents($image_path);
-				echo "tryDL";
+			echo "tryDL";
 
-			echo ($image);
+			if ($image) {
+				echo ($image);
+			} else {
+				echo ("false");
+			}
 			//$save_path = "capture/".$file_name;
 			//while (!file_put_contents($save_path, $image)) {
 			//	echo "tryUL";
