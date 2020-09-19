@@ -34,8 +34,9 @@
 		$client = Client::getInstance();
 
 		$request = $client->getMessageFactory()->createCaptureRequest();
-
+		$request->setTimeout(5000);
 		$request->setUrl('https://news.yahoo.co.jp/articles/a2de6eda5d92f1529e8e0ff5c9dcb8ddc4d4e0fe');
+		var_dump($request);
 		// サイズ指定
 		$width = 400;
 		$height = 300;
@@ -50,6 +51,7 @@
 
 		// ファイルの保存先を指定する
 		$file = 'capture/file.jpg';
+
 		$request->setOutputFile($file);
 		$response = $client->getMessageFactory()->createResponse();
 		$client->send($request, $response);
