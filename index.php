@@ -33,7 +33,7 @@
 
 		$client = Client::getInstance();
 		$client->isLazy();
-		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4')) {}
+		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://www.tokyo-felicia.com/')) {}
 		$request->setTimeout(10000);
 		// サイズ指定
 		$width = 800;
