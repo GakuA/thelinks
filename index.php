@@ -7,13 +7,12 @@
 	<body>
 		hello
 		<?php
-		/*
 		require_once( 'vendor/autoload.php' );
 		use JonnyW\PhantomJs\Client;
 
 		$client = Client::getInstance();
 
-		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://www.youtube.com/watch?v=vinLNTEd-Dg')) {}
+		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://google.com')) {}
 		while (!$response = $client->getMessageFactory()->createResponse()) {}
 
 		// サイズ指定
@@ -32,16 +31,6 @@
 		$file = 'capture/file.jpg';
 		$request->setOutputFile($file);
 		$client->send($request, $response);
-		*/
 		?>
-		<script>
-			var page = require('webpage').create();
-			page.open('https://www.youtube.com/watch?v=vinLNTEd-Dg', function () {
-			    window.setTimeout(function () {
-			        page.render('capture/file.jpg');
-			        phantom.exit();
-			    }, 200);
-			});
-		</script>
 	</body>
 </html>
