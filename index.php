@@ -13,9 +13,9 @@
 
 		$url = "https://s.wordpress.com/mshots/v1/https://m.youtube.com/watch?v=0FTTildpyt4";
 		//$url = "https://pbs.twimg.com/profile_banners/42566884/1526165516/1500x500";
-		while (!$img = wp_remote_get($url)) {}
+		while (!$img = file_get_contents($url, true)) {}
 		//$img = file($url);
-		var_dump($img);
+		//var_dump($img);
 		$img_name = "capture/file.jpg";
 
 		//画像を保存
