@@ -32,15 +32,13 @@
 		use JonnyW\PhantomJs\Client;
 
 		$client = Client::getInstance();
-		$client->isLazy();
-		$location = 'partials';
-
-		$serviceContainer = ServiceContainer::getInstance();
-		$procedureLoader = $serviceContainer->get('procedure_loader_factory')->createProcedureLoader($location);
-
-		$client->getProcedureLoader()->addLoader($procedureLoader);
 
 		$request = $client->getMessageFactory()->createCaptureRequest();
+
+		$request->setHeaders([
+			'User-Agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36' 
+		]);
+
 		$request->setTimeout(10000);
 		$request->setUrl('https://m.youtube.com/watch?v=0FTTildpyt4');
 		// サイズ指定
