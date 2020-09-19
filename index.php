@@ -32,8 +32,8 @@
 		use JonnyW\PhantomJs\Client;
 
 		$client = Client::getInstance();
-		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4', 'POST', 10000)) {}
-
+		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://m.youtube.com/watch?v=0FTTildpyt4')) {}
+		$request->setTimeout(5000);
 		// サイズ指定
 		$width = 800;
 		$height = 600;
