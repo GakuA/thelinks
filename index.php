@@ -13,7 +13,7 @@
 
 		$client = Client::getInstance();
 
-		$request  = $client->getMessageFactory()->createCaptureRequest('http://jonnyw.me');
+		$request  = $client->getMessageFactory()->createCaptureRequest('https://www.youtube.com/watch?v=CeVOKBEYebs');
 		$response = $client->getMessageFactory()->createResponse();
 
 		// ファイルの保存先を指定する
