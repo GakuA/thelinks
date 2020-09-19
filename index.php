@@ -7,25 +7,74 @@
 	<body>
 		hello
 		<?php
-			use \JonnyW\PhantomJs\Client;
-			//画像のパス
-			//$image_path = "https://s.wordpress.com/mshots/v1/https://www.youtube.com?w=300&h=200";
-			$image_path = "https://docodoor.co.jp/2017/wp-content/uploads/2020/07/FireShot-Capture-357-%E9%9B%91%E6%9C%A8%E3%81%AE%E5%BA%AD%E3%81%AA%E3%82%89-%E4%BD%9C%E5%BA%AD%E5%B9%B3%E5%B2%A1-%E6%AD%A6%E8%94%B5%E9%87%8E%E3%83%BB%E4%B8%89%E9%B7%B9%E3%83%BB%E4%B8%96%E7%94%B0%E8%B0%B7%E3%82%92%E4%B8%AD%E5%BF%83%E3%81%AB%E9%9B%91%E6%9C%A8%E3%81%AE%E5%BA%AD%E3%81%A4%E3%82%99%E3%81%8F%E3%82%8A%E3%82%92%E3%81%93%E3%82%99%E6%8F%90%E6%A1%88-sakutei-hiraoka.com_-300x192.jpg";
-			//保存するファイル名
-			$file_name = 'test.jpg';
-			$save_path = "capture/".$file_name;
-			while (!$image = file_get_contents($image_path)) {
-				echo "tryDL";
-			}
+		use \JonnyW\PhantomJs\Client;
+		class ScreenShot{
+		    private $client;
+		    private $request;
+		    private $response;
+		    private $width;
+		    private $height;
+		    private $top;
+		    private $left;
+		    private $URL;
+		    private $timeOut = 30000;
 
-			if ($image) {
-				echo ($image);
-			} else {
-				echo ("false");
-			}
-			while (!file_put_contents($save_path, $image)) {
-				echo "tryUL";
-			}
+		    //画面サイズなどを決定する
+		    function __construct($width, $height, $URL){
+		        $this->width = $width;
+		        $this->height = $height;
+		        $this->top = 0;
+		        $this->left = 0;
+		        $this->URL = $URL;
+		    }
+
+		    //phantomjs実行クライアントを作成する
+		    public function MakeClient(){
+		        $this->client = Client::getInstance();
+		        $this->client->isLazy(); //ページのレンダリング待ち
+		        $this->client->getEngine()->setPath(__DIR__ . '/../bin/phantomjs');
+		    }
+
+		    //スクショリクエストの詳細を設定する
+		    //ここでは、ブラウザサイズと同じ範囲を撮影範囲としている
+		    public function MakeRequest($screenshotFileName){
+		        $this->request = $this->client->getMessageFactory()->createCaptureRequest($this->URL, 'GET');
+		        $this->request->setTimeout($this->timeOut); //強制的に終了するまでの時間
+		        $this->request->setOutputFile($screenshotFileName); //スクショのファイル名
+		        $this->request->setViewportSize($this->width, $this->height); //ブラウザサイズ
+		        $this->request->setCaptureDimensions($this->width, $this->height, $this->top, $this->left); //撮影範囲
+		    }
+
+		    //リクエストのレスポンス（の受け皿）を作成する
+		    public function MakeRespose(){
+		        $this->response = $this->client->getMessageFactory()->createResponse();
+		    }
+
+		    //リクエストを送信する
+		    public function SendRequset(){
+		        $this->client->send($this->request, $this->response);
+		    }
+
+		    //
+		    public function MakeImg($screenshotFileName){
+		        $this->MakeClient();
+		        $this->MakeRequest($screenshotFileName);
+		        $this->MakeRespose();
+		        $this->SendRequset();
+		        //ファイルサイズ 0 byte = 画面取得できてないと判断
+		        If(filesize($ssName) != 0){
+		            return true;
+		        }else{
+		            return false;
+		        }
+		    }
+		}
+
+
+		//yahooのトップをブラウザの横幅を1000として撮影し、
+		//screenshot.jpgというファイルに保存する。
+		$screenshot = new ScreenShot(1000, 750, 'https://www.youtube.com/watch?v=0FTTildpyt4');
+		$screenshot->MakeImg('capture/test.jpg');
 		?>
 	</body>
 </html>
