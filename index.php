@@ -12,8 +12,8 @@
 
 		$client = Client::getInstance();
 
-		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://docodoor.co.jp/web/')) {};
-		$response = $client->getMessageFactory()->createResponse();
+		while (!$request  = $client->getMessageFactory()->createCaptureRequest('https://docodoor.co.jp/web/')) {}
+		while (!$response = $client->getMessageFactory()->createResponse()) {}
 
 		// サイズ指定
 		$width = 400;
