@@ -33,6 +33,13 @@
 
 		$client = Client::getInstance();
 		$client->isLazy();
+		$location = 'partials/';
+
+		$serviceContainer = ServiceContainer::getInstance();
+		$procedureLoader = $serviceContainer->get('procedure_loader_factory')->createProcedureLoader($location);
+
+		$client->getProcedureLoader()->addLoader($procedureLoader);
+
 		$request = $client->getMessageFactory()->createCaptureRequest();
 		$request->setTimeout(10000);
 		$request->setUrl('https://m.youtube.com/watch?v=0FTTildpyt4');
