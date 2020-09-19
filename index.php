@@ -10,7 +10,8 @@
 		<img src="https://s.wordpress.com/mshots/v1/https://m.youtube.com/watch?v=0FTTildpyt4?w=400&h=300">
 		-->
 		<?php
-		$url = "https://pbs.twimg.com/profile_banners/42566884/1526165516/1500x500";
+		$url = "https://s.wordpress.com/mshots/v1/https://m.youtube.com/watch?v=0FTTildpyt4";
+		//$url = "https://pbs.twimg.com/profile_banners/42566884/1526165516/1500x500";
 /*
 		while (!$img = file_get_contents($url)) {}
 		*/
