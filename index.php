@@ -21,6 +21,7 @@ echo("world");
 
 		$request->setOutputFile($file);
 		$client->send($request, $response);
+		echo("world2");
 		?>
 	</body>
 </html>
