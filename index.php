@@ -57,7 +57,7 @@
 
 		    //
 		    public function MakeImg($screenshotFileName){
-				//echo("try2");
+				echo("try2");
 		        $this->MakeClient();
 		        $this->MakeRequest($screenshotFileName);
 		        $this->MakeRespose();
