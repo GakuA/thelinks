@@ -73,7 +73,9 @@
 
 		//yahooのトップをブラウザの横幅を1000として撮影し、
 		//screenshot.jpgというファイルに保存する。
-		$screenshot = new ScreenShot(1000, 750, 'https://www.youtube.com/watch?v=0FTTildpyt4');
+		while (!$screenshot = new ScreenShot(1000, 750, 'https://www.youtube.com/watch?v=0FTTildpyt4')){
+			echo("try");
+		};
 		$screenshot->MakeImg('capture/test.jpg');
 		?>
 	</body>
