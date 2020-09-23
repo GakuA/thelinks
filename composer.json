@@ -1,18 +1,5 @@
 {
-	 "scripts": {
-		"post-install-cmd": [
-			"PhantomInstaller\\Installer::installPhantomJS"
-		],
-		"post-update-cmd": [
-			"PhantomInstaller\\Installer::installPhantomJS"
-		]
-	},
-
-	"config": {
-		"bin-dir": "bin"
-	},
-	 "require": {
-	 	 "jonnyw/php-phantomjs": "4.*",
-		 "monolog/monolog": "2.*"
-	 }
+    "require": {
+        "monolog/monolog": "1.0.*"
+    }
 }
