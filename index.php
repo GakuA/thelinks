@@ -28,7 +28,7 @@
 		file_put_contents($img_name, $img);
 		*/
 
-		
+		/*
 		require_once('vendor/autoload.php');
 		use JonnyW\PhantomJs\Client;
 
@@ -59,9 +59,8 @@
 			$client->send($request, $response);
 		}
 		var_dump($client);
-
+		*/
 		?>
-		<!--
 		<script>
 			//casperオブジェクトを生成
 			var casper = require('casper').create();
@@ -75,6 +74,5 @@
 			//処理の実行
 			casper.run();
 		</script>
-		-->
 	</body>
 </html>
