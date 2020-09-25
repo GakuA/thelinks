@@ -6,9 +6,7 @@
 	</head>
 	<body>
 		hello
-		<!--
 		<img src="https://s.wordpress.com/mshots/v1/https://m.youtube.com/watch?v=0FTTildpyt4?w=400&h=300">
-		-->
 		<?php
 		/*
 		$url = "https://s.wordpress.com/mshots/v1/https://m.youtube.com/watch?v=0FTTildpyt4";
@@ -61,7 +59,7 @@
 		var_dump($client);
 		*/
 		?>
-		
+		<!--
 		<script>
 			//casperオブジェクトを生成
 			var casper = require('casper').create();
@@ -75,5 +73,6 @@
 			//処理の実行
 			casper.run();
 		</script>
+		-->
 	</body>
 </html>
