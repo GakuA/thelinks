@@ -10,8 +10,10 @@
 		<div id="logo">
 			<img src="img/logo.png">
 		</div>
-		hello
-		<img src="https://s.wordpress.com/mshots/v1/https://www.youtube.com/watch?v=pJkMTYvZu0w?w=400&h=300">
+		<div class="link">
+			<img src="https://s.wordpress.com/mshots/v1/https://www.youtube.com/watch?v=pJkMTYvZu0w?w=400&h=300">
+			aaaaaaaaaaaaa
+		</div>
 		<?php
 		/*
 		$url = "https://s.wordpress.com/mshots/v1/https://m.youtube.com/watch?v=0FTTildpyt4";
