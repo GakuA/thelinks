@@ -25,6 +25,9 @@ a {
 	margin: 0 10px;
 	display: inline-block;
 }
+#menu a {
+	color: #fff;
+}
 .link {
 	width: min-content;
 }
