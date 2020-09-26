@@ -1,3 +1,9 @@
+body {
+	text-align: center;
+}
+div {
+	text-align: left;
+}
 a {
 	color: #000;
 	text-decoration: none;
