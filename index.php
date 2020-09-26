@@ -12,7 +12,7 @@
 		</div>
 		<div class="link">
 			<img src="https://s.wordpress.com/mshots/v1/https://www.youtube.com/watch?v=pJkMTYvZu0w?w=400&h=300">
-			aaaaaaaaaaaaa
+			<span>aaaaaaaaaaaaa</span>
 		</div>
 		<?php
 		/*
