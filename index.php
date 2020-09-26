@@ -13,7 +13,7 @@
 		<div id="menu">
 			<div class="bar">
 				<div class="button">
-					HOME
+					<a href="/">HOME</a>
 				</div>
 				<div class="button">
 					投稿
