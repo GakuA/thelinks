@@ -11,8 +11,10 @@
 			<img src="img/logo.png">
 		</div>
 		<div id="menu">
-			<div class="menuButton">
-				投稿
+			<div class="bar">
+				<div class="button">
+					投稿
+				</div>
 			</div>
 		</div>
 		<div id="links">
