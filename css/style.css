@@ -16,8 +16,9 @@ a {
 	padding: 10px;
 }
 #menu .bar {
-	width: 200px;
+	width: min-content;
 	margin: 0 auto;
+	white-space: nowrap;
 }
 #menu .button {
 	color: #fff;

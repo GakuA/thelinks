@@ -13,6 +13,9 @@
 		<div id="menu">
 			<div class="bar">
 				<div class="button">
+					HOME
+				</div>
+				<div class="button">
 					投稿
 				</div>
 			</div>
