@@ -28,8 +28,14 @@ a {
 #menu a {
 	color: #fff;
 }
+#links {
+	width: min-content;
+	display: initial;
+}
 .link {
 	width: min-content;
+	display: inline-block;
+    margin: 10px;
 }
 .link img {
 	width: 200px;

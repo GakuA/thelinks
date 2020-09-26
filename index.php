@@ -16,7 +16,7 @@
 					<a href="/">HOME</a>
 				</div>
 				<div class="button">
-					Link
+					LINK
 				</div>
 			</div>
 		</div>
