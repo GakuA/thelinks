@@ -10,9 +10,16 @@
 		<div id="logo">
 			<img src="img/logo.png">
 		</div>
-		<div class="link">
-			<img src="https://s.wordpress.com/mshots/v1/https://www.youtube.com/watch?v=pJkMTYvZu0w?w=400&h=300">
-			<span>aaaaaaaaaaaaa</span>
+		<div id="sideMenu">
+			<div>
+				投稿
+			</div>
+		</div>
+		<div id="links">
+			<div class="link">
+				<img src="https://s.wordpress.com/mshots/v1/https://www.youtube.com/watch?v=pJkMTYvZu0w?w=400&h=300">
+				<span>aaaaaaaaaaaaa</span>
+			</div>
 		</div>
 		<?php
 		/*
