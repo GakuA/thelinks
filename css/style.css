@@ -10,6 +10,14 @@ a {
 	width: 200px;
 	margin: 0 auto;
 }
+#menu {
+	background-color: #4ec7cd;
+	margin: 0px 0 20px 0;
+	padding: 10px;
+}
+.menuButton {
+	color: #fff;
+}
 .link {
 	width: 200px;
 }
@@ -19,9 +27,10 @@ a {
 }
 .link span {
 	margin: 0 6px;
-	height: 72px;
+	height: 62px;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
 	overflow: hidden;
+	font-size: 14px;
 }

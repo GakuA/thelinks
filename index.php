@@ -11,7 +11,7 @@
 			<img src="img/logo.png">
 		</div>
 		<div id="menu">
-			<div>
+			<div class="menuButton">
 				投稿
 			</div>
 		</div>
