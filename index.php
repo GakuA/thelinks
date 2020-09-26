@@ -5,6 +5,9 @@
 		<title>LINKS</title>
 	</head>
 	<body>
+		<div>
+			<img src="img/logo.png">
+		</div>
 		hello
 		<img src="https://s.wordpress.com/mshots/v1/https://www.youtube.com/watch?v=pJkMTYvZu0w?w=400&h=300">
 		<?php
