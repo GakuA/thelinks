@@ -26,7 +26,7 @@
 		<div>
 			<form>
 				<input id="url" type="text">
-				<input id="postBtn" type="button" value="リンクを貼る">
+				<input id="postBtn" type="submit" value="リンクを貼る">
 			</form>
 		</div>
 		<div id="links">

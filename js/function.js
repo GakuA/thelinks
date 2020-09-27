@@ -8,7 +8,8 @@ $(function(){
 
 		getTitle(url).done(function(result) {
 			if (!result) {
-				alert("有効なURLを入力してください");
+				alert("URLを入力してください");
+				return;
 			}
 			//var title = result;
 			alert(result);
