@@ -1,9 +1,12 @@
 $(function() {
-	$.ajax({
-		type: "POST",
-		url: "links.php",
-		success: function(data) {
-			$("#links").html(data);
-		}
+	getTitle(url).done(function(links) {
+		$("#links").html(links);
 	});
+
+	function getLinks(url){
+		return $.ajax({
+			type: "POST",
+			url: "links.php",
+		})
+	}
 });
