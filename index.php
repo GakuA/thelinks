@@ -29,18 +29,6 @@
 			<input id="postBtn" type="button" value="リンクを貼る">
 		</div>
 		<div id="links">
-			<div class="link">
-				<a target="_blank" href="https://www.youtube.com/watch?v=pJkMTYvZu0w">
-					<img src="https://s.wordpress.com/mshots/v1/https://www.youtube.com/watch?v=pJkMTYvZu0w?w=400&h=300">
-					<span>怖い怖い怖い！！ビクロイ獲るまでずっと喋ってた・・・【 野性爆弾 ロッシー 】 - YouTube</span>
-				</a>
-			</div>
-			<div class="link">
-				<a target="_blank" href="https://www.youtube.com/watch?v=pJkMTYvZu0w">
-					<img src="https://s.wordpress.com/mshots/v1/https://www.youtube.com/watch?v=pJkMTYvZu0w?w=400&h=300">
-					<span>怖い怖い怖い！！ビクロイ獲るまでずっと喋ってた・・・【 野性爆弾 ロッシー 】 - YouTube</span>
-				</a>
-			</div>
 		</div>
 
 
