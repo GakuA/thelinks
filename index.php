@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</div>
-		<div>
+		<div id="post">
 			<input id="url" type="text">
 			<input id="postBtn" type="button" value="リンクを貼る">
 		</div>
