@@ -23,6 +23,10 @@
 				</div>
 			</div>
 		</div>
+		<div>
+			<input id="url" type="text">
+			<input id="postBtn" type="button" value="リンクを貼る">
+		</div>
 		<div id="links">
 			<div class="link">
 				<a target="_blank" href="https://www.youtube.com/watch?v=pJkMTYvZu0w">

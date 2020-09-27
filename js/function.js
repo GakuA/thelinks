@@ -1,34 +1,33 @@
 $(function(){
-	/*
-	$(".postBtn").click(function() {
-		if (!$(".url").val()) {
+	$("#postBtn").click(function() {
+		if (!$("#url").val()) {
 			alert("URLを入力してください");
 			return;
 		}
-		var url = $(".url").val();
+		var url = $("#url").val();
 
-		getTitle().done(function(result) {
-			var title = result;
+		getTitle(url).done(function(result) {
+			if (!result) {
+				alert("有効なURLを入力してください");
+			}
+			//var title = result;
+			alert(result);
 		});
 
 		$.ajax({
 			type: "POST",
 			url: "post.php",
 			data: {urlAjax: url, titleAjax: title, dateAjax: new Date().getTime()},
-			success: function(result) {
+			success: function() {
 				location.reload();
 			}
 		});
 	});
-*/
-getTitle().done(function(result) {
-	alert (result);
-});
 
-	function getTitle(){
+	function getTitle(url){
 		return $.ajax({
 			type: 'POST',
-			data: {postUrl: "https://www.youtube.com/"},
+			data: {postUrl: url},
 			url: 'getTitle.php'
 		})
 	}
