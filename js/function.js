@@ -25,10 +25,10 @@ $(function(){
 				return;
 			}
 			//var title = result;
-			alert(result);
-			$("#modal").removeClass("on");
+			var title = result;
+			//$("#modal").removeClass("on");
 		});
-/*
+
 		$.ajax({
 			type: "POST",
 			url: "post.php",
@@ -37,8 +37,8 @@ $(function(){
 				location.reload();
 			}
 		});
-		*/
 	}
+
 	function getTitle(url){
 		return $.ajax({
 			type: 'POST',
