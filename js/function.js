@@ -21,7 +21,7 @@ $(function(){
 		var title = "";
 		getTitle(url).done(function(result) {
 			if (!result) {
-				alert("有効なURLを入力してください");
+				alert("リンクを作成できませんでした");
 				$("#modal").removeClass("on");
 				return;
 			}
