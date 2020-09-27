@@ -1,5 +1,14 @@
 $(function(){
 	$("#postBtn").click(function() {
+		post();
+	});
+	$("#url").keypress(function(e) {
+		if ( e.which == 13 ) {
+			post();
+		}
+	});
+
+	function post() {
 		if (!$("#url").val()) {
 			alert("URLを入力してください");
 			return;
@@ -23,7 +32,7 @@ $(function(){
 				location.reload();
 			}
 		});
-	});
+	}
 
 	function getTitle(url){
 		return $.ajax({
