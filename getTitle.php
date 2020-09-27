@@ -10,7 +10,7 @@
 	*/
 	echo title($html);
 
-	function title() {
+	function title(html) {
 		if(preg_match("/<title>(.*?)<\/title>/i", html, $matches)){
 			return $matches[1];
 		} else {
