@@ -1,6 +1,9 @@
 #all {
 	text-align: center;
+	width: 100%;
 	position: fixed;
+	margin: 0 auto;
+	-webkit-overflow-scrolling: touch;
 }
 div {
 	text-align: left;
