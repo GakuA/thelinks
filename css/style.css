@@ -1,5 +1,6 @@
 body {
 	text-align: center;
+	width: calc(100% - 16px);
 }
 div {
 	text-align: left;
