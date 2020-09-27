@@ -9,7 +9,7 @@
 			break;
 		}
 	}
-	echo $title;
+	echo "try:".$count.$title;
 
 	function title($html) {
 		if(preg_match("/<title>(.*?)<\/title>/i", $html, $matches)){
