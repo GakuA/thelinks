@@ -26,18 +26,18 @@ $(function(){
 				return;
 			}
 			//var title = result;
-			title = result;
+			//title = result;
 			//$("#modal").removeClass("on");
+			$.ajax({
+				type: "POST",
+				url: "post.php",
+				data: {urlAjax: url, titleAjax: result, dateAjax: new Date().getTime()},
+				success: function() {
+					location.reload();
+				}
+			});
 		});
 
-		$.ajax({
-			type: "POST",
-			url: "post.php",
-			data: {urlAjax: url, titleAjax: title, dateAjax: new Date().getTime()},
-			success: function() {
-				location.reload();
-			}
-		});
 	}
 
 	function getTitle(url){

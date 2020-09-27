@@ -1,12 +1,9 @@
 $(function() {
-	getLinks(url).done(function(links) {
-		$("#links").html(links);
+	$.ajax({
+		type: "POST",
+		url: "links.php",
+		success: function(data) {
+			$("#links").html(data);
+		}
 	});
-
-	function getLinks(url){
-		return $.ajax({
-			type: "POST",
-			url: "links.php",
-		})
-	}
 });
