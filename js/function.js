@@ -29,7 +29,7 @@ $(function(){
 			title = result;
 			//$("#modal").removeClass("on");
 		});
-alert(title);
+
 		$.ajax({
 			type: "POST",
 			url: "post.php",
