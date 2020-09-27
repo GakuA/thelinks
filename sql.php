@@ -4,11 +4,7 @@
 		die('接続失敗です。');
 	}
 
-	$url = $_POST["urlAjax"];
-	$title = $_POST["titleAjax"];
-	$date = $_POST["dateAjax"];
-
-	$sql = "INSERT INTO link(url, title, date) VALUES ('$url', '$title', '$date')";
+	$sql = "CREATE TABLE link(url text, title text, date numeric)";
 	$result_flag = pg_query($sql);
 
 	if (!$result_flag) {
