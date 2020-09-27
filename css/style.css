@@ -41,13 +41,13 @@ a {
 }
 #links {
 	width: min-content;
-	height: min-content;
 	display: initial;
 }
 .link {
 	width: min-content;
 	display: inline-block;
-    margin: 10px;
+	margin: 10px;
+	vertical-align: top;
 }
 .link img {
 	width: 200px;
