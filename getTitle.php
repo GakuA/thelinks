@@ -2,10 +2,14 @@
 	$html = @file_get_contents($_POST["postUrl"]);
 
 	$count = 1;
-	while (/*!$title = */!title($html) || $count <= 3) {
+	while ($count <= 3) {
 		$count++;
+		$title = title($html);
+		if ($title) {
+			break;
+		}
 	}
-	echo title($html);
+	echo $title;
 
 	function title($html) {
 		if(preg_match("/<title>(.*?)<\/title>/i", $html, $matches)){
