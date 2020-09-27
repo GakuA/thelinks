@@ -1,5 +1,6 @@
-body {
+all {
 	text-align: center;
+	position: fixed;
 }
 div {
 	text-align: left;
@@ -64,4 +65,11 @@ a {
 	height: 100%;
 	z-index: 10;
 	text-align: center;
+}
+#modal.on {
+	display: block;
+}
+
+#modal svg {
+	margin-top: calc(50vh - 20px);
 }
