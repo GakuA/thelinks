@@ -7,7 +7,6 @@
 		$count++;
 	}
 	echo $title;
-	*/
 	echo title($html);
 
 	function title(html) {
@@ -16,4 +15,10 @@
 		} else {
 			return false;
 		}
+	}
+	*/
+	if(preg_match("/<title>(.*?)<\/title>/i", $html, $matches)){
+		echo $matches[1];
+	} else {
+		return false;
 	}
