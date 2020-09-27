@@ -4,7 +4,7 @@
 		die('接続失敗です。');
 	}
 
-	$result = pg_query("SELECT * FROM links order by date desc");
+	$result = pg_query("SELECT * FROM link order by date desc");
 
 	if(!$result){
 		exit('SELECTクエリーが失敗しました。');
