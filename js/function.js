@@ -32,8 +32,8 @@ $(function(){
 				location.reload();
 			}
 		});
+		*/
 	}
-*/
 	function getTitle(url){
 		return $.ajax({
 			type: 'POST',
