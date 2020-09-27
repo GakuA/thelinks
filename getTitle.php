@@ -7,18 +7,20 @@
 		$count++;
 	}
 	echo $title;
-	echo title($html);
+	*/
+	title($html);
 
 	function title(html) {
 		if(preg_match("/<title>(.*?)<\/title>/i", html, $matches)){
-			return $matches[1];
+			echo $matches[1];
 		} else {
 			return false;
 		}
 	}
-	*/
+	/*
 	if(preg_match("/<title>(.*?)<\/title>/i", $html, $matches)){
 		echo $matches[1];
 	} else {
 		return false;
 	}
+	*/
