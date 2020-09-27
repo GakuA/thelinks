@@ -20,7 +20,7 @@ $(function(){
 
 		getTitle(url).done(function(result) {
 			if (!result) {
-				alert("URLを入力してください");
+				alert("有効なURLを入力してください");
 				$("#modal").removeClass("on");
 				return;
 			}
