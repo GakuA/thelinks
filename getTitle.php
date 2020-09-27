@@ -1,8 +1,8 @@
 <?php
 	$html = @file_get_contents($_POST["postUrl"]);
 
-	$count = 1;
 	/*
+	$count = 1;
 	while (!$title = title() || $count <= 3) {
 		$count++;
 	}
