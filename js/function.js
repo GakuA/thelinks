@@ -17,7 +17,7 @@ $(function(){
 
 		getTitle(url).done(function(result) {
 			if (!result) {
-				alert("URLを入力してください");
+				alert("有効なURLを入力してください");
 				return;
 			}
 			//var title = result;
