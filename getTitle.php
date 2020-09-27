@@ -13,7 +13,7 @@
 
 	function title($html) {
 		if(preg_match("/<title>(.*?)<\/title>/i", $html, $matches)){
-			return mb_convert_encoding($matches[1], "UTF-8", mb_detect_encoding($matches[1]));
+			return mb_convert_encoding($matches[1], "UTF-8", mb_detect_encoding($matches[1], "ASCII, JIS, EUC-JP, SJIS, SHIFT_JIS"));
 		} else {
 			return false;
 		}
