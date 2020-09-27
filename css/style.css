@@ -17,6 +17,7 @@ a {
 	margin: 0 auto;
 }
 #menu {
+	display: none;
 	background-color: #4ec7cd;
 	margin: 0px 0 20px 0;
 	padding: 10px;
