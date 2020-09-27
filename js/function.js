@@ -18,6 +18,7 @@ $(function(){
 		}
 		var url = $("#url").val();
 
+		var title = "";
 		getTitle(url).done(function(result) {
 			if (!result) {
 				alert("有効なURLを入力してください");
@@ -25,7 +26,7 @@ $(function(){
 				return;
 			}
 			//var title = result;
-			var title = result;
+			title = result;
 			//$("#modal").removeClass("on");
 		});
 
