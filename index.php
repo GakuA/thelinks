@@ -4,6 +4,9 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/function.js"></script>
+
 		<title>LINKS</title>
 	</head>
 	<body>
