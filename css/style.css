@@ -41,6 +41,7 @@ a {
 }
 #links {
 	width: min-content;
+	height: min-content;
 	display: initial;
 }
 .link {
