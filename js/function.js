@@ -9,19 +9,24 @@ $(function(){
 	});
 
 	function post() {
+		$("#modal").addClass("on");
+
 		if (!$("#url").val()) {
 			alert("URLを入力してください");
+			$("#modal").removeClass("on");
 			return;
 		}
 		var url = $("#url").val();
 
 		getTitle(url).done(function(result) {
 			if (!result) {
-				alert("有効なURLを入力してください");
+				alert("URLを入力してください");
+				$("#modal").removeClass("on");
 				return;
 			}
 			//var title = result;
 			alert(result);
+			$("#modal").removeClass("on");
 		});
 /*
 		$.ajax({
