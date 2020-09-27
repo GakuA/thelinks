@@ -1,5 +1,5 @@
 $(function() {
-	getTitle(url).done(function(links) {
+	getLinks(url).done(function(links) {
 		$("#links").html(links);
 	});
 
