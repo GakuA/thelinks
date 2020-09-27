@@ -27,7 +27,7 @@ $(function(){
 			}
 			//var title = result;
 			alert(result);
-			//$("#modal").removeClass("on");
+			$("#modal").removeClass("on");
 			/*
 			$.ajax({
 				type: "POST",
