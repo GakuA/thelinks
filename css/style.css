@@ -1,9 +1,5 @@
-#all {
+body {
 	text-align: center;
-	width: 100%;
-	position: fixed;
-	margin: 0 auto;
-	-webkit-overflow-scrolling: touch;
 }
 div {
 	text-align: left;
@@ -68,6 +64,7 @@ a {
 	height: 100%;
 	z-index: 10;
 	text-align: center;
+	top: 0;
 }
 #modal.on {
 	display: block;
