@@ -2,7 +2,7 @@
 	$html = @file_get_contents($_POST["postUrl"]);
 
 	$count = 1;
-	while ($count <= 3) {
+	while ($count <= 5) {
 		$count++;
 		$title = title($html);
 		if ($title) {
