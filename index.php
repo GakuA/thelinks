@@ -12,6 +12,8 @@
 		<script src="js/load.js"></script>
 		<script src="js/function.js"></script>
 
+		<script data-ad-client="ca-pub-3505153643581987" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 		<title>Links - ただリンクを貼るだけのサイト</title>
 	</head>
 	<body>
