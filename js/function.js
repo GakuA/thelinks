@@ -24,6 +24,9 @@ $(function(){
 				alert("リンクを作成できませんでした");
 				$("#modal").removeClass("on");
 				return;
+			} else if(result == "@already@") {
+				alert("リンク済です");
+				$("#modal").removeClass("on");
 			}
 			//var title = result;
 			//alert(result);
