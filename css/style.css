@@ -42,11 +42,11 @@ a {
 	margin: 0 0 20px 0;
 }
 #links {
-	width: min-content;
-	width: -moz-min-content;
 	display: initial;
 }
 .link {
+	width: min-content;
+	width: -moz-min-content;
 	display: inline-block;
 	margin: 10px;
 	vertical-align: top;
