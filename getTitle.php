@@ -43,11 +43,11 @@
 
 	function title($html) {
 		if(preg_match("/<title>(.*?)<\/title>/i", $html, $matches)){
-			var cord = mb_detect_encoding($matches[1], "UTF-8, ASCII, JIS, EUC-JP, SJIS, SHIFT_JIS");
-			if (cord == "UTF-8") {
+			$cord = mb_detect_encoding($matches[1], "UTF-8, ASCII, JIS, EUC-JP, SJIS, SHIFT_JIS");
+			if ($cord == "UTF-8") {
 				return $matches[1];
 			} else {
-				return mb_convert_encoding($matches[1], "UTF-8", cord);
+				return mb_convert_encoding($matches[1], "UTF-8", $cord);
 			}
 		} else {
 			return false;
