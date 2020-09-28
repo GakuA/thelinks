@@ -28,7 +28,7 @@
 
 
 
-	$html = @file_get_contents($_POST["postUrl"]);
+	$html = @file_get_contents($url);
 
 	$count = 1;
 	while ($count <= 3) {
