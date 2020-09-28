@@ -24,6 +24,7 @@
 
 	if ($alreadyFlg) {
 		echo "@already@";
+		return;
 	}
 
 
