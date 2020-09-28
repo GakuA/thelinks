@@ -3,7 +3,7 @@
 	if (!$link) {
 		die('接続失敗です。');
 	}
-/*
+
 	$result = pg_query("SELECT * FROM link order by date");
 
 	if(!$result){
@@ -11,12 +11,20 @@
 	}
 
 	while($row = pg_fetch_assoc($result)){
+		$now = time() * 1000;
 		$date = $row["date"];
 		$url = $row["url"];
-		$title = $row["title"];
-		$html = '<div class="link"><a target="_blank" href="'.$url.'"><img src="https://s.wordpress.com/mshots/v1/'.$url.'?w=200&h=150"><span>'.$title.'</span></a></div>';
-		echo $html;
+
+		if ($now - $date > 864000000) {
+			$sql = "DELETE FROM link WHERE url = $url";
+			$result_flag = pg_query($sql);
+
+			if (!$result_flag) {
+				exit('INSERTクエリーが失敗しました。');
+			}
+		} else {
+			break;
+		}
 	}
-*/
-	echo time() * 1000;
+
 	pg_close($link);
