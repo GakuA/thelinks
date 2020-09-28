@@ -14,7 +14,7 @@
 
 	$alreadyFlg = false;
 	while($row = pg_fetch_assoc($result)){
-		if ($html == $row["url"]) {
+		if ($url == $row["url"]) {
 			$alreadyFlg = true;
 			break;
 		}
