@@ -16,11 +16,11 @@
 		$url = "https://www.pxt.jp/ja/diary/article/200/";//$row["url"];
 
 		//if ($now - $date > 864000000) {
-			$sql = "DELETE FROM link WHERE url = $url";
+			$sql = "DELETE FROM link WHERE url =" . $url";
 			$result_flag = pg_query($sql);
 
 			if (!$result_flag) {
-				exit('INSERTクエリーが失敗しました。');
+				exit('DELETEクエリーが失敗しました。');
 			}
 		//} else {
 			break;
