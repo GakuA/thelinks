@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="keywords" content="リンク,宣伝,面白い,暇つぶし,見つける">
+		<meta name="keywords" content="リンク,宣伝,集客,暇つぶし,見つける">
 		<meta name="description" content="ただリンクを貼るだけのサイトです。リンクを貼るもよし、貼ってあるリンクを見るもよし">
 
 		<link rel="stylesheet" href="css/style.css" type="text/css">
