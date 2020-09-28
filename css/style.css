@@ -10,6 +10,7 @@ a {
 }
 #logo {
 	width: min-content;
+	width: -moz-min-content;
 	margin: 20px auto;
 }
 #logo img {
@@ -24,6 +25,7 @@ a {
 }
 #menu .bar {
 	width: min-content;
+	width: -moz-min-content;
 	margin: 0 auto;
 	white-space: nowrap;
 }
@@ -41,10 +43,10 @@ a {
 }
 #links {
 	width: min-content;
+	width: -moz-min-content;
 	display: initial;
 }
 .link {
-	width: min-content;
 	display: inline-block;
 	margin: 10px;
 	vertical-align: top;
