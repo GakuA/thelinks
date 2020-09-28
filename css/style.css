@@ -11,7 +11,6 @@ a {
 #logo {
 	width: min-content;
 	width: -moz-min-content;
-	width: -webkit-min-content;
 	margin: 20px auto;
 }
 #logo img {
@@ -27,7 +26,6 @@ a {
 #menu .bar {
 	width: min-content;
 	width: -moz-min-content;
-	width: -webkit-min-content;
 	margin: 0 auto;
 	white-space: nowrap;
 }
@@ -47,9 +45,9 @@ a {
 	display: initial;
 }
 .link {
+	width: 200px;
 	width: min-content;
 	width: -moz-min-content;
-	width: -webkit-min-content;
 	display: inline-block;
 	margin: 10px;
 	vertical-align: top;
@@ -60,7 +58,7 @@ a {
 }
 .link span {
 	margin: 0 6px;
-	height: 60px;
+	height: 62px;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
