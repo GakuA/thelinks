@@ -16,7 +16,7 @@ $(function(){
 			$("#modal").removeClass("on");
 			return;
 		}
-		var url = $("#url").val();
+		var url = encodeURIComponent($("#url").val());
 
 		var title = "";
 		getTitle(url).done(function(result) {
@@ -37,7 +37,7 @@ $(function(){
 					location.reload();
 				}
 			});
-			
+
 		});
 
 	}
