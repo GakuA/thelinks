@@ -16,7 +16,7 @@
 		$url = "https://www.pxt.jp/ja/diary/article/200/";//$row["url"];
 
 		//if ($now - $date > 864000000) {
-			$sql = "DELETE FROM link WHERE url =" . $url;var_dump($sql);
+			$sql = "DELETE FROM link WHERE url = " . $url;var_dump($sql);
 			$result_flag = pg_query($sql);
 
 			if (!$result_flag) {
