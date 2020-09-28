@@ -27,6 +27,7 @@ $(function(){
 			} else if(result == "@already@") {
 				alert("リンク済です");
 				$("#modal").removeClass("on");
+				return;
 			}
 			//var title = result;
 			//alert(result);
