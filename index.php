@@ -31,7 +31,7 @@
 			</div>
 		</div>
 		<div id="post">
-			<input id="url" type="text">
+			<input id="url" type="text" placeholder="URLを入力">
 			<input id="postBtn" type="button" value="リンクを貼る">
 		</div>
 		<div id="links">
