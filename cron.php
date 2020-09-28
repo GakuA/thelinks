@@ -13,18 +13,18 @@
 	while($row = pg_fetch_assoc($result)){
 		$now = time() * 1000;
 		$date = $row["date"];
-		$url = $row["url"];
+		$url = "https://www.pxt.jp/ja/diary/article/200/";//$row["url"];
 
-		if ($now - $date > 864000000) {
+		//if ($now - $date > 864000000) {
 			$sql = "DELETE FROM link WHERE url = $url";
 			$result_flag = pg_query($sql);
 
 			if (!$result_flag) {
 				exit('INSERTクエリーが失敗しました。');
 			}
-		} else {
+		//} else {
 			break;
-		}
+		//}
 	}
 
 	pg_close($link);

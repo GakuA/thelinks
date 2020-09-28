@@ -38,7 +38,7 @@ $(function(){
 				url: "post.php",
 				data: {urlAjax: url, titleAjax: result, dateAjax: new Date().getTime()},
 				success: function() {
-					alert("リンクを10日間掲載します");
+					alert("ありがとうございます\nリンクを10日間掲載します");
 					location.reload();
 				}
 			});
