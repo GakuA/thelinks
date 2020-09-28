@@ -4,12 +4,19 @@
 		die('接続失敗です。');
 	}
 /*
-	$sql = "CREATE TABLE link(url text, title text, date numeric)";
-	$result_flag = pg_query($sql);
+	$result = pg_query("SELECT * FROM link order by date");
 
-	if (!$result_flag) {
-		exit('INSERTクエリーが失敗しました。');
+	if(!$result){
+		exit('SELECTクエリーが失敗しました。');
+	}
+
+	while($row = pg_fetch_assoc($result)){
+		$date = $row["date"];
+		$url = $row["url"];
+		$title = $row["title"];
+		$html = '<div class="link"><a target="_blank" href="'.$url.'"><img src="https://s.wordpress.com/mshots/v1/'.$url.'?w=200&h=150"><span>'.$title.'</span></a></div>';
+		echo $html;
 	}
 */
-	echo time();
+	echo time() * 1000;
 	pg_close($link);
