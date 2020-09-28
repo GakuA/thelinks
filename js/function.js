@@ -16,7 +16,7 @@ $(function(){
 			$("#modal").removeClass("on");
 			return;
 		}
-		var url = encodeURIComponent($("#url").val());
+		var url = $("#url").val();
 
 		var title = "";
 		getTitle(url).done(function(result) {

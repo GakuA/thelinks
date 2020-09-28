@@ -4,7 +4,7 @@
 		die('接続失敗です。');
 	}
 
-	$url = $_POST["urlAjax"];
+	$url = htmlspecialchars($_POST["urlAjax"]);
 	$title = $_POST["titleAjax"];
 	$date = $_POST["dateAjax"];
 
