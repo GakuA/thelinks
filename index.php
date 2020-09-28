@@ -9,7 +9,7 @@
 		<script src="js/load.js"></script>
 		<script src="js/function.js"></script>
 
-		<title>LINKS - ただリンクを貼るだけのサイト</title>
+		<title>Links - ただリンクを貼るだけのサイト</title>
 	</head>
 	<body>
 		<div id="logo">
