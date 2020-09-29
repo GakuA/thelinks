@@ -50,6 +50,7 @@ a {
 	top: 0;
 	right: 5px;
 	color: #757575;
+	cursor: pointer;
 }
 #links {
 	display: initial;
