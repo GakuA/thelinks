@@ -21,7 +21,7 @@ $(function(){
 		var title = "";
 		getTitle(url).done(function(result) {
 			if (!result) {
-				alert("リンクを作成できませんでした\nこのサイトは対象外かもしれません");
+				alert("リンクを作成できませんでした\n対象外のサイトかもしれません");
 				$("#modal").removeClass("on");
 				return;
 			} else if(result == "@already@") {
