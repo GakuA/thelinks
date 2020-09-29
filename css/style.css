@@ -76,6 +76,9 @@ a {
 	overflow: hidden;
 	font-size: 14px;
 }
+.ad {
+	display: none;
+}
 #modal {
 	display: none;
 	position: absolute;
