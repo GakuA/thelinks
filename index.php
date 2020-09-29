@@ -33,7 +33,7 @@
 		<div id="post">
 			<div id="urlBox">
 				<input id="url" type="text" placeholder="URLを入力">
-				<div id="clear" onclick="$('#url').val('')">×</div>
+				<!--<div id="clear" onclick="$('#url').val('')">×</div>-->
 			</div>
 			<input id="postBtn" type="button" value="リンクを貼る">
 		</div>
