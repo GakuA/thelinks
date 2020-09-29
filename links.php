@@ -10,7 +10,7 @@
 		exit('SELECTクエリーが失敗しました。');
 	}
 
-	$linkNo = 1;
+	$linkNo = 5;
 	while($row = pg_fetch_assoc($result)){
 		$url = $row["url"];
 		$title = $row["title"];
