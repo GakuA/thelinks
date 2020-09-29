@@ -17,6 +17,6 @@
 		echo $html;
 	}
 
-	echo '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7x+eo+1+2-5" data-ad-client="ca-pub-3505153643581987" data-ad-slot="6072094961"></ins><script> (adsbygoogle = window.adsbygoogle || []).push({});</script>';
+	echo '<div class="link"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7x+eo+1+2-5" data-ad-client="ca-pub-3505153643581987" data-ad-slot="6072094961"></ins><script> (adsbygoogle = window.adsbygoogle || []).push({});</script></div>';
 
 	pg_close($link);
