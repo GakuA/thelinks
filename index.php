@@ -13,7 +13,7 @@
 		<script src="js/function.js"></script>
 
 		<script data-ad-client="ca-pub-3505153643581987" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		
+
 		<title>Links - ただリンクを貼るだけのサイト</title>
 	</head>
 	<body>
@@ -31,7 +31,10 @@
 			</div>
 		</div>
 		<div id="post">
-			<input id="url" type="text" placeholder="URLを入力">
+			<div id="urlBox">
+				<input id="url" type="text" placeholder="URLを入力">
+				<div id="clear" onclick="$('#url').val('')">×</div>
+			</div>
 			<input id="postBtn" type="button" value="リンクを貼る">
 		</div>
 		<div id="links">
