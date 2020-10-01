@@ -4,7 +4,8 @@
 		die('接続失敗です。');
 	}
 
-	$sql = "CREATE TABLE link(url text, title text, date numeric)";
+	//$sql = "CREATE TABLE link(url text, title text, date numeric)";
+	$sql = "DELETE FROM link WHERE url = 'https://girlschannel.net/topics/248642/'";
 	$result_flag = pg_query($sql);
 
 	if (!$result_flag) {
