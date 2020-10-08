@@ -96,6 +96,7 @@
 		while (!$response->getStatus()) {
 			$client->send($request, $response);
 		}
+
 		var_dump($client);
 		*/
 		?>
