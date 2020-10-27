@@ -97,3 +97,16 @@ a {
 #modal svg {
 	margin-top: calc(50vh - 20px);
 }
+
+.adSP {
+	display: none;
+}
+
+@media screen and (max-width:462px) {
+	.adPC {
+		display: none;
+	}
+	.adSP {
+		display: block;
+	}
+}
