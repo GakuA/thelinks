@@ -116,6 +116,7 @@ a {
 	}
 
 	.link span {
+		display: -webkit-inline-box;
 		width: calc(100vw - 148px);
 		padding: 7px 0 0 6px;
 		vertical-align: top;
