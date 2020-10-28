@@ -22,10 +22,12 @@ $(function(){
 		getTitle(url).done(function(result) {
 			if (!result) {
 				alert("リンクを作成できませんでした\n対象外のサイトかもしれません");
+				$("#url").val("");
 				$("#modal").removeClass("on");
 				return;
 			} else if(result == "@already@") {
 				alert("リンク済です");
+				$("#url").val("")
 				$("#modal").removeClass("on");
 				return;
 			}
