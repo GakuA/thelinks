@@ -20,12 +20,12 @@ $(function(){
 
 		var title = "";
 		getTitle(url).done(function(result) {
-			if (!result) {
+			if (!result.title) {
 				alert("リンクを作成できませんでした\n対象外のサイトかもしれません");
 				$("#url").val("");
 				$("#modal").removeClass("on");
 				return;
-			} else if(result == "@already@") {
+			} else if(result.title == "@already@") {
 				alert("リンク済です");
 				$("#url").val("")
 				$("#modal").removeClass("on");
@@ -38,7 +38,7 @@ $(function(){
 			$.ajax({
 				type: "POST",
 				url: "post.php",
-				data: {urlAjax: url, titleAjax: result, dateAjax: new Date().getTime()},
+				data: {urlAjax: url, titleAjax: result.title, dateAjax: new Date().getTime(), imgAjax: result.img},
 				success: function() {
 					alert("ありがとうございます\nリンクを10日間掲載します");
 					location.reload();

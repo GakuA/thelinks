@@ -14,7 +14,11 @@
 	while($row = pg_fetch_assoc($result)){
 		$url = $row["url"];
 		$title = $row["title"];
-		$html = '<div class="link"><a target="_blank" href="'.$url.'"><img src="https://s.wordpress.com/mshots/v1/'.$url.'?w=200&h=150"><span>'.$title.'</span></a></div>';
+		$img = $row["img"];
+		if (!$img) {
+			$img = "https://s.wordpress.com/mshots/v1/'.$url.'?w=200&h=150"
+		}
+		$html = '<div class="link"><a target="_blank" href="'.$url.'"><img src="'.$img.'"><span>'.$title.'</span></a></div>';
 		echo $html;
 /*
 		if ($linkNo == 6) {

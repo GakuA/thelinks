@@ -39,7 +39,19 @@
 			break;
 		}
 	}
-	echo $title;
+
+	$count = 1;
+	while ($count <= 3) {
+		$count++;
+		$img = twitterImg($html);
+		if ($img) {
+			break;
+		}
+	}
+
+	$list = array("title" => $title, "img" => $img);
+
+	echo json_encode($list);
 
 	function title($html) {
 		if(preg_match("/<title>(.*?)<\/title>/i", $html, $matches)){
@@ -51,5 +63,13 @@
 			}
 		} else {
 			return false;
+		}
+	}
+
+	function twitterImg($html) {
+		if(preg_match('/<meta property="og:image" content="([^¥"]+)/i', $html, $matches)){
+			return $matches[1];
+		} else {
+			return "";
 		}
 	}
