@@ -20,7 +20,7 @@ $(function(){
 
 		var title = "";
 		getTitle(url).done(function(result) {
-			console.log(result)
+			console.log(result.title)
 			if (!result.title) {
 				alert("リンクを作成できませんでした\n対象外のサイトかもしれません");
 				$("#url").val("");
