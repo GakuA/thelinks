@@ -67,7 +67,7 @@
 	}
 
 	function twitterImg($html) {
-		if(preg_match('/<meta property="og:image" content="([^¥"]+)/i', $html, $matches)){
+		if(preg_match('/<meta property="og:image" content="([^\"]+)/i', $html, $matches)){
 			return $matches[1];
 		} else {
 			return "";
