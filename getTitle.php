@@ -24,6 +24,7 @@
 
 	if ($alreadyFlg) {
 		$list = array("title" => "@already@");
+		echo json_encode($list);
 		return;
 	}
 
