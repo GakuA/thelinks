@@ -7,8 +7,9 @@
 	$url = htmlspecialchars($_POST["urlAjax"]);
 	$title = $_POST["titleAjax"];
 	$date = $_POST["dateAjax"];
+	$img = $_POST["imgAjax"];
 
-	$sql = "INSERT INTO link(url, title, date) VALUES ('$url', '$title', '$date')";
+	$sql = "INSERT INTO link(url, title, date, img) VALUES ('$url', '$title', '$date', '$img')";
 	$result_flag = pg_query($sql);
 
 	if (!$result_flag) {
