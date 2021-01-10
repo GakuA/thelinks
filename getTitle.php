@@ -23,7 +23,7 @@
 	pg_close($link);
 
 	if ($alreadyFlg) {
-		echo "@already@";
+		$title = "@already@";
 		return;
 	}
 
