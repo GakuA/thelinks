@@ -9,9 +9,8 @@
 	if(!$result){
 		exit('SELECTクエリーが失敗しました。');
 	}
-var_dump($result);
 //	$linkNo = 5;
-/*	while($row = pg_fetch_assoc($result)){
+	while($row = pg_fetch_assoc($result)){
 		$url = $row["url"];
 		$title = $row["title"];
 		$img = $row["img"];
@@ -26,6 +25,6 @@ var_dump($result);
 		}
 */
 		//$linkNo++;
-//	}
+	}
 
 	pg_close($link);
