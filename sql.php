@@ -5,7 +5,7 @@
 	}
 
 	//$sql = "CREATE TABLE link(url text, title text, date numeric)";
-	$sql = "DELETE FROM link WHERE url = 'https://girlschannel.net/topics/248642/'";
+	$sql = "DELETE FROM link WHERE url = 'https://encount.press/archives/129839/'";
 	$result_flag = pg_query($sql);
 
 	if (!$result_flag) {
