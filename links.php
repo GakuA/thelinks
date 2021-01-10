@@ -16,7 +16,7 @@
 		$title = $row["title"];
 		$img = $row["img"];
 		if (!$img) {
-			$img = "https://s.wordpress.com/mshots/v1/'.$url.'?w=200&h=150"
+			$img = "https://s.wordpress.com/mshots/v1/".$url."?w=200&h=150"
 		}
 		$html = '<div class="link"><a target="_blank" href="'.$url.'"><img src="'.$img.'"><span>'.$title.'</span></a></div>';
 		echo $html;
