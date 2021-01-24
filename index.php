@@ -17,7 +17,7 @@
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@gackey" />
-		<meta property="og:url" content="https://thelinks.herokuapp.com/" />
+		<meta property="og:url" content="https://thelinks.herokuapp.com" />
 		<meta property="og:title" content="Links" />
 		<meta property="og:description" content="ただリンクを貼るだけのサイト" />
 		<meta property="og:image" content="https://thelinks.herokuapp.com/img/logo_twitter.jpg" />
