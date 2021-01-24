@@ -15,6 +15,13 @@
 		<meta name="keywords" content="リンク,宣伝,集客,暇つぶし,見つける">
 		<meta name="description" content="ただリンクを貼るだけのサイトです。リンクを貼るもよし、貼ってあるリンクを見るもよし。">
 
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@gackey" />
+		<meta property="og:url" content="https://thelinks.herokuapp.com/" />
+		<meta property="og:title" content="Links" />
+		<meta property="og:description" content="ただリンクを貼るだけのサイト" />
+		<meta property="og:image" content="https://thelinks.herokuapp.com/img/logo_twitter.jpg" />
+
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
