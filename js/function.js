@@ -9,14 +9,16 @@ $(function(){
 	});
 
 	function post() {
+		var url = $("#url").val();
+		$("#url").val("");
+
 		$("#modal").addClass("on");
 
-		if (!$("#url").val()) {
+		if (!url) {
 			alert("URLを入力してください");
 			$("#modal").removeClass("on");
 			return;
 		}
-		var url = $("#url").val();
 
 		var title = "";
 		getTitle(url).done(function(result) {
@@ -24,12 +26,10 @@ $(function(){
 			title = parseResult.title;
 			if (!title) {
 				alert("リンクを作成できませんでした\n対象外のサイトかもしれません");
-				$("#url").val("");
 				$("#modal").removeClass("on");
 				return;
 			} else if(title == "@already@") {
 				alert("リンク済です");
-				$("#url").val("")
 				$("#modal").removeClass("on");
 				return;
 			}
