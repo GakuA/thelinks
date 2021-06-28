@@ -11,11 +11,14 @@ a {
 #logo {
 	width: min-content;
 	width: -moz-min-content;
-	margin: 20px auto;
+	margin: 20px auto 5px;
 }
 #logo img {
 	width: 200px;
 	margin: 0 auto;
+}
+#toptext {
+	text-align: center;
 }
 #menu {
 	display: none;

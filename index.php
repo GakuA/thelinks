@@ -34,6 +34,9 @@
 		<div id="logo">
 			<img src="img/logo.png">
 		</div>
+		<div id="toptext">
+			ただリンクを貼るだけのサイト
+		</div>
 		<div id="menu">
 			<div class="bar">
 				<div class="button">
