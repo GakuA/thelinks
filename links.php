@@ -9,7 +9,7 @@
 	if(!$result){
 		exit('SELECTクエリーが失敗しました。');
 	}
-//	$linkNo = 5;
+	$linkNo = 9;
 	while($row = pg_fetch_assoc($result)){
 		$url = $row["url"];
 		$title = $row["title"];
