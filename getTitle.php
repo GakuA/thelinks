@@ -55,7 +55,7 @@
 	echo json_encode($list);
 
 	function title($html) {
-		if(preg_match("/<title>(.*?)<\/title>/i", $html, $matches)){
+		if(preg_match("/<title.*?>(.*?)<\/title>/i", $html, $matches)){
 			$cord = mb_detect_encoding($matches[1], "UTF-8, ASCII, JIS, EUC-JP, SJIS, SHIFT_JIS");
 			if ($cord == "UTF-8") {
 				return $matches[1];
