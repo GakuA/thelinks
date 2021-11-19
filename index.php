@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-mail me
+mail me!
 akazawagaku@gmail.com
 -->
 <html>
