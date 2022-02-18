@@ -4,6 +4,7 @@ $(function() {
 		url: "links.php",
 		success: function(data) {
 			$("#links").html(data);
+			consol.log($("#links .link").length);
 		}
 	});
 });
