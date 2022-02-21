@@ -1,8 +1,11 @@
 <?php
+/*
 	if　(isset($_GET['url'])) {
 		$url = $_GET['url'];
 	}
-	echo '$url';
+	*/
+	echo "test";
+	//echo $url;
 /*
 	$html = @file_get_contents($url);
 
