@@ -2,7 +2,7 @@
 	if　(isset($_GET['url'])) {
 		$url = $_GET['url'];
 	}
-	echo $url;
+	echo '$url';
 /*
 	$html = @file_get_contents($url);
 
