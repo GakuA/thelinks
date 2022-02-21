@@ -7,7 +7,7 @@
 	//echo $url;
 
 	$html = @file_get_contents($url);
-
+/*
 	if(preg_match("/<title.*?>(.*?)<\/title>/i", $html, $matches)){
 		$cord = mb_detect_encoding($matches[1], "UTF-8, ASCII, JIS, EUC-JP, SJIS, SHIFT_JIS");
 		if ($cord == "UTF-8") {
@@ -17,4 +17,12 @@
 		}
 	} else {
 		return false;
+	}
+*/
+
+	$cord = mb_detect_encoding($html, "UTF-8, ASCII, JIS, EUC-JP, SJIS, SHIFT_JIS");
+	if ($cord == "UTF-8") {
+		echo $html;
+	} else {
+		echo mb_convert_encoding($html, "UTF-8", $cord);
 	}
