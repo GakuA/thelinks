@@ -1,12 +1,11 @@
 <?php
 
-	if　(isset($_GET['url'])) {
+	if (isset($_GET['url'])) {
 		$url = $_GET['url'];
 	}
 
-	echo "test";
 	//echo $url;
-/*
+
 	$html = @file_get_contents($url);
 
 	if(preg_match("/<title.*?>(.*?)<\/title>/i", $html, $matches)){
@@ -19,4 +18,3 @@
 	} else {
 		return false;
 	}
-*/
